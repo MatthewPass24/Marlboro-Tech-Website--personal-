@@ -53,19 +53,24 @@ nav {
     text-align: center;
   }
 
-  .webCircle{
+  .webCircle {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     color: White;
     border-radius: 100%;
-    margin-top: 10%;
     font-family: Kanit;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 7px 1px 2px  rgb(75, 75, 75);
-    margin-top: 0%;
-    width: 10em;
-    height: 10em;
+    box-shadow: 7px 1px 2px rgb(75, 75, 75);
+    width: 15em;
+    height: 15em;
 }
-.w1{
-    background-color: #EC3963;
+
+.w1 {
+    background-color: #C31673;
+}
+
+p.quote {
+    margin: 0; 
+    font-size: 2rem;
 }
