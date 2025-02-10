@@ -196,7 +196,7 @@ section.students {
   position: absolute;
   height: 40%;
   width: 100%;
-  background: #7d2ae8;
+  background: #46A9D3;
   border-radius: 20px 20px 0 0;
 }
 .card .card-content {
@@ -212,7 +212,7 @@ section .card .image {
   width: 140px;
   border-radius: 50%;
   padding: 3px;
-  background: #7d2ae8;
+  background: #46A9D3;
 }
 section .card .image img {
   height: 100%;
@@ -262,7 +262,7 @@ section .card .image img {
 .card .rating i {
   font-size: 18px;
   margin: 0 2px;
-  color: #7d2ae8;
+  color: #46A9D3;
 }
 .card .button {
   width: 100%;
@@ -272,7 +272,7 @@ section .card .image img {
   margin-top: 20px;
 }
 .card .button button {
-  background: #7d2ae8;
+  background: #46A9D3;
   outline: none;
   border: none;
   color: #fff;
@@ -283,7 +283,7 @@ section .card .image img {
   cursor: pointer;
 }
 .button button:hover {
-  background: #6616d0;
+  background: #46A9D3;
 }
 .swiper-pagination {
   position: absolute;
@@ -292,18 +292,18 @@ section .card .image img {
   height: 7px;
   width: 26px;
   border-radius: 25px;
-  background: #7d2ae8;
+  background: #46A9D3;
 }
 .swiper-button-next,
 .swiper-button-prev {
   opacity: 0.7;
-  color: #7d2ae8;
+  color: #46A9D3;
   transition: all 0.3s ease;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   opacity: 1;
-  color: #7d2ae8;
+  color: #46A9D3;
 }
 /* Responsive media query code for small screens */
 @media (max-width: 768px) {
@@ -320,4 +320,53 @@ section .card .image img {
 }
 .accordion{
   margin: 1em;
+}
+.left-section {
+  flex: 1;
+  margin-right: 1em;
+}
+.left-section h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.left-section h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.left-section h1.info {
+  font-size: 40px;
+  font-weight: 500;
+}
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.category {
+  width: 45%;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.category:hover {
+  opacity: 0.7;
+}
+.list {
+  font-family: Arial, sans-serif;
+            background-color: #C8102E;
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+}
+.majors {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: flex-start;
 }
