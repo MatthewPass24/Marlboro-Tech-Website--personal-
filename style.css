@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(225, 230, 235);
 }
 
 nav {
@@ -14,6 +14,7 @@ footer {
   font-family: Kanit;
   text-align: center;
   width: 100%;
+  margin-top: 5em;
 }
 
 .nav-link, .navb {
@@ -56,6 +57,7 @@ footer {
     background-blend-mode: overlay;
     background-color: #9fd9ff81;    
   }
+
   h2{
     text-align: center;
     padding: 1em;
@@ -173,7 +175,7 @@ h1.display-1{
       
       }
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+/* start of the card carousel for the alumni */
 section.students {
   position: relative;
   height: 450px;
@@ -221,21 +223,7 @@ section .card .image img {
   border-radius: 50%;
   border: 3px solid #fff;
 }
-.card .media-icons {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.card .media-icons i {
-  color: #fff;
-  opacity: 0.6;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+
 .card .media-icons i:hover {
   opacity: 1;
 }
@@ -254,16 +242,7 @@ section .card .image img {
   font-size: 15px;
   font-weight: 500;
 }
-.card .rating {
-  display: flex;
-  align-items: center;
-  margin-top: 18px;
-}
-.card .rating i {
-  font-size: 18px;
-  margin: 0 2px;
-  color: #46A9D3;
-}
+
 .card .button {
   width: 100%;
   display: flex;
@@ -316,10 +295,14 @@ section .card .image img {
   }
 }
 .bg-hero-image{
-  background-color: black;
+  background-color: #46A9D3;
 }
 .accordion{
   margin: 1em;
+}
+
+.accordion-body {
+  padding: 20px; /* Reduce padding inside the content */
 }
 .left-section {
   flex: 1;
@@ -369,4 +352,65 @@ section .card .image img {
   width: 80%;
   justify-content: space-between;
   align-items: flex-start;
+}
+/*Start of the majors section */
+.programs {
+  background-color: #C31673;
+}
+.container-select {
+  padding: 40px;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+.menu-item:hover, .menu-item:focus {
+  outline: 2px solid white;
+}
+.back-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+.back-button:hover {
+  background-color: white;
+  color: #c3002f;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #46A9D3; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  border: 1px solid white;
+  font-family: 'Poppins';
+}
+
+#myBtn:hover {
+  background-color: #D6D6D6; /* Add a dark-grey background on hover */
+  border: 1px solid #46A9D3;
+  color: #46A9D3;
+}
+h1.question{
+padding: 2em;
 }
