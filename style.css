@@ -364,6 +364,13 @@ section .card .image img {
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
+  margin-bottom: 0em;
+  text-align: center;
+}
+.subtext {
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-weight: 300;
 }
 .menu-item {
   display: flex;
@@ -413,4 +420,66 @@ section .card .image img {
 }
 h1.question{
 padding: 2em;
+}
+.accordion{
+  margin-top: 2em;
+  text-align: left;
+  margin-right: 5em;
+  margin-left: 5em;
+  margin-bottom: 5em;
+}
+
+.accordion-item{
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+}
+
+.accordion li label{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+label::before{
+  content: '+';
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.accordion .content{
+  color: #555;
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::before{
+  content: '-';
+}
+h1#change-title{
+  margin: 3em;
+}
+.majorBtn {
+  all: unset; /* Removes default button styles */
+
 }

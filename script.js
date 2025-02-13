@@ -52,3 +52,33 @@ let swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
+//js for the changing FAQ section depending on selected major
+function aI(){
+  document.getElementById('change-title').innerText='Artificial Intelligence FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compEngineering(){
+  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compSci(){
+  document.getElementById('change-title').innerText='Computer Science FAQ' 
+  document.getElementById('change-text').innerText='Computer Science: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compEngineering(){
+  document.getElementById('change-title').innerText='Cybersecurity FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compEngineering(){
+  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compEngineering(){
+  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
+function compEngineering(){
+  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
+  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+}
