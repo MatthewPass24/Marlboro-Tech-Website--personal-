@@ -54,31 +54,60 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 //js for the changing FAQ section depending on selected major
-function aI(){
-  document.getElementById('change-title').innerText='Artificial Intelligence FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+function aI() {
+  document.getElementById('change-title').innerText = 'Artificial Intelligence FAQ';
+  document.getElementById('change-text').innerText = 'Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compEngineering(){
-  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function compEngineering() {
+  document.getElementById('change-title').innerText = 'Computer Engineering FAQ';
+  document.getElementById('change-text').innerText = 'Computer Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compSci(){
-  document.getElementById('change-title').innerText='Computer Science FAQ' 
-  document.getElementById('change-text').innerText='Computer Science: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function compSci() {
+  document.getElementById('change-title').innerText = 'Computer Science FAQ';
+  document.getElementById('change-text').innerText = 'Computer Science: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compEngineering(){
-  document.getElementById('change-title').innerText='Cybersecurity FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function cyberSecurity() {
+  document.getElementById('change-title').innerText = 'Cybersecurity FAQ';
+  document.getElementById('change-text').innerText = 'Cybersecurity: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compEngineering(){
-  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function electricalEng() {
+  document.getElementById('change-title').innerText = 'Electrical Engineering FAQ';
+  document.getElementById('change-text').innerText = 'Electrical Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compEngineering(){
-  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function graphicDesign() {
+  document.getElementById('change-title').innerText = 'Graphic Design FAQ';
+  document.getElementById('change-text').innerText = 'Graphic Design: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 }
-function compEngineering(){
-  document.getElementById('change-title').innerText='Computer Engineering FAQ' 
-  document.getElementById('change-text').innerText='Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.' 
+
+function hci() {
+  document.getElementById('change-title').innerText = 'Human Computer Interaction FAQ';
+  document.getElementById('change-text').innerText = 'Human Computer Interaction: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+}
+
+function infoTech() {
+  document.getElementById('change-title').innerText = 'Information Technology FAQ';
+  document.getElementById('change-text').innerText = 'Information Technology: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+}
+
+function itInformatics() {
+  document.getElementById('change-title').innerText = 'IT Informatics FAQ';
+  document.getElementById('change-text').innerText = 'IT Informatics: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+}
+
+function mechEng() {
+  document.getElementById('change-title').innerText = 'Mechanical Engineering FAQ';
+  document.getElementById('change-text').innerText = 'Mechanical Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+}
+
+function softEng() {
+  document.getElementById('change-title').innerText = 'Software Engineering FAQ';
+  document.getElementById('change-text').innerText = 'Software Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+}
+function toggleInfo(element) {
+  element.classList.toggle("active");
 }
