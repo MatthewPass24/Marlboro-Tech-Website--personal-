@@ -499,25 +499,22 @@ h1#change-title{
 
 }
 .college-item {
-  position: relative;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
+  transition: transform 0.2s ease;
 }
 
 .college-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }
 
 .college-logo {
-  width: 80px;
-  height: 80px;
+  width: 100px; /* Adjust as needed */
+  height: auto;
   object-fit: contain;
+  margin: 10px; /* Adds spacing between logos */
 }
 
 .college-info {
@@ -525,8 +522,6 @@ h1#change-title{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: white;
   display: flex;
@@ -536,6 +531,7 @@ h1#change-title{
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding: 10px;
 }
 
 .college-item:hover .college-info,
