@@ -74,7 +74,7 @@
             </header>
             <main>
                 <!--Back to top button https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
-                <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+                <button class="up" onclick="topFunction()" id="myBtn"><a href="#top" class="arrow">^</a></button>
                 <main>
                     <div class="banner2 w-100 mb-5 vh-80 d-flex justify-content-center align-items-center">
                         <div class="content text-center">
@@ -83,81 +83,120 @@
                         <div><a href="#about" class="scroll-down" address="true"></a>
                         </div>
                     </div>
-                    <h2 class="text-center mb-4">College Attendance Statistics</h2>
+                    <h2 class="text-center mb-4">Where Are Students Now?</h2>
                     <div class="row g-3">
                         <!-- Repeat this block for each college -->
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/purdue-logo.png" alt="College 1" class="college-logo">
+                                <img src="img/purdue-logo (1).png" alt="College 1" class="college-logo">
                                 <div class="college-info">10,000 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/rutgers-logo.png" alt="College 2" class="college-logo">
-                                <div class="college-info">15,500 students attended</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/R.png" alt="College 3" class="college-logo">
+                                <img src="img/R (1).png" alt="College 3" class="college-logo">
                                 <div class="college-info">20,200 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/purdue-logo.png" alt="College 1" class="college-logo">
+                                <img src="img/rutgers-logo (1).png" alt="College 2" class="college-logo">
+                                <div class="college-info">15,500 students attended</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/wisconsin (1).png" alt="College 1" class="college-logo">
                                 <div class="college-info">10,000 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/rutgers-logo.png" alt="College 2" class="college-logo">
+                                <img src="img/R (2) (1).png" alt="College 2" class="college-logo">
                                 <div class="college-info">15,500 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/R.png" alt="College 3" class="college-logo">
+                                <img src="img/SF (1).png" alt="College 3" class="college-logo">
                                 <div class="college-info">20,200 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/purdue-logo.png" alt="College 1" class="college-logo">
+                                <img src="img/tcnj (1).png" alt="College 1" class="college-logo">
                                 <div class="college-info">10,000 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/rutgers-logo.png" alt="College 2" class="college-logo">
+                                <img src="img/sacred (1) (1).png" alt="College 2" class="college-logo">
                                 <div class="college-info">15,500 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/R.png" alt="College 3" class="college-logo">
+                                <img src="img/delaware (1).png" alt="College 3" class="college-logo">
                                 <div class="college-info">20,200 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/purdue-logo.png" alt="College 1" class="college-logo">
+                                <img src="img/brookdale (1).png" alt="College 1" class="college-logo">
                                 <div class="college-info">10,000 students attended</div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/rutgers-logo.png" alt="College 2" class="college-logo">
-                                <div class="college-info">15,500 students attended</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="college-item" onclick="toggleInfo(this)">
-                                <img src="img/R.png" alt="College 3" class="college-logo">
+                                <img src="img/rpi (1).png" alt="College 3" class="college-logo">
                                 <div class="college-info">20,200 students attended</div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/syracuse (1).png" alt="College 2" class="college-logo">
+                                <div class="college-info">15,500 students attended</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/njit (1).png" alt="College 1" class="college-logo">
+                                <div class="college-info">10,000 students attended</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/rider (1).png" alt="College 2" class="college-logo">
+                                <div class="college-info">15,500 students attended</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/Maroon-T-Temple-Logo (1).png" alt="College 3" class="college-logo">
+                                <div class="college-info">20,200 students attended</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+                            <div class="college-item" onclick="toggleInfo(this)">
+                                <img src="img/drexel (1).png" alt="College 1" class="college-logo">
+                                <div class="college-info">10,000 students attended</div>
+                            </div>
+                        </div>
+                    </div>
+                    
 
                     <div class="bander">
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
@@ -196,49 +235,49 @@
                                     are taking</h5>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
-                                        <div class="menu-item" onclick="aI()">
+                                        <div class="menu-item" onclick="updateFAQ('Artificial Intelligence')">
                                             <button type="button" class="majorBtn">Artificial Intelligence</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="compEngineering()">
+                                        <div class="menu-item" onclick="updateFAQ('Computer Engineering')">
                                             <button type="button" class="majorBtn">Computer Engineering</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="compSci()">
+                                        <div class="menu-item" onclick="updateFAQ('Computer Science')">
                                             <button type="button" class="majorBtn">Computer Science</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="cyberSecurity()">
+                                        <div class="menu-item" onclick="updateFAQ('Cybersecurity')">
                                             <button type="button" class="majorBtn">Cybersecurity</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="electricalEng()">
+                                        <div class="menu-item" onclick="updateFAQ('Electrical Engineering')">
                                             <button type="button" class="majorBtn">Electrical Engineering</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="graphicDesign()">
+                                        <div class="menu-item" onclick="updateFAQ('Graphic Design')">
                                             <button type="button" class="majorBtn">Graphic Design</button>
                                             <span>&#8250;</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
-                                        <div class="menu-item" onclick="hci()">
+                                        <div class="menu-item" onclick="updateFAQ('Human-Computer Interaction')">
                                             <button type="button" class="majorBtn">Human Computer Interaction</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="infoTech()">
+                                        <div class="menu-item" onclick="updateFAQ('Information Technology')">
                                             <button type="button" class="majorBtn">Information Technology</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="itInformatics()">
+                                        <div class="menu-item" onclick="updateFAQ('IT Informatics')">
                                             <button type="button" class="majorBtn">IT Informatics</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="mechEng()">
+                                        <div class="menu-item" onclick="updateFAQ('Mechanical Engineering')">
                                             <button type="button" class="majorBtn">Mechanical Engineering</button>
                                             <span>&#8250;</span>
                                         </div>
-                                        <div class="menu-item" onclick="softEng()">
+                                        <div class="menu-item" onclick="updateFAQ('Software Engineering')">
                                             <button type="button" class="majorBtn">Software Engineering</button>
                                             <span>&#8250;</span>
                                         </div>
@@ -248,25 +287,21 @@
                         </div>
 
 
-                        <div class="container">
+                        <div class="container mt-4">
                             <h1 class="text-center" id="change-title">FAQ Section</h1>
                             <div class="col-12 justify-content-center">
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
+                                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 What does this job entail?
                                             </button>
                                         </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <h5>Tuition & Fees</h5>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body" id="job-entailment">
                                                 <ul>
-                                                    <li class="dropdown" id="change-text"><b>In-State: </b>$61,344</li>
-                                                    <li class="dropdown"><b>Out-of-State: </b> $61,344</li>
+                                                    <li>Select a major to view details.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -274,59 +309,37 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo">
+                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                 What skills are needed?
                                             </button>
                                         </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <h5>Scholarships</h5>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body" id="skills-needed">
                                                 <ul>
-                                                    <li class="dropdown"><b>Tepper MBA Scholarship: </b> All students
-                                                        are
-                                                        considered during admission</li>
-                                                    <li class="dropdown"><b>Heinz College Scholarship: </b> Awarded to
-                                                        those
-                                                        affiliated with specific partner organizations</li>
-                                                    <li class="dropdown"><b>US Military: </b> This benefit is available
-                                                        to
-                                                        the spouses and children of veterans</li>
-
+                                                    <li>Select a major to view details.</li>
                                                 </ul>
-
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 What's the average salary?
                                             </button>
                                         </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <h5>Financial Plans</h5>
+                                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body" id="average-salary">
                                                 <ul>
-                                                    <li><b>Nelnet Monthly Payment: </b> A payment plan that allows
-                                                        families
-                                                        to pay in monthly installments</li>
-                                                    <li><b>Semester Plan: </b> A semester-based plan that are available
-                                                        to
-                                                        both undergraduate and graduate students</li>
+                                                    <li>Select a major to view details.</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                </main>
+                    </div>                </main>
                 <footer id="footer">
                     <!-- Grid container -->
                     <div class="container">

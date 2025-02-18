@@ -2,27 +2,21 @@
 let mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
-// When the user clicks on the button, scroll to the top of the document
+
+  // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-//click down button
-$(function() {
-  $('.scroll-down').click (function() {
-    $('html, body').animate({scrollTop: $('section').offset().top }, 'slow');
-    return false;
-  });
-});
 
 //js for the card carousel 
 let swiper = new Swiper(".mySwiper", {
@@ -54,60 +48,213 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 //js for the changing FAQ section depending on selected major
-function aI() {
-  document.getElementById('change-title').innerText = 'Artificial Intelligence FAQ';
-  document.getElementById('change-text').innerText = 'Artificial Intelligence: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+function updateFAQ(major) {
+  let faqData = {
+      "Artificial Intelligence": {
+          entailment: [
+              "Develops algorithms and machine learning models.",
+              "Works with intelligent systems and automation.",
+              "Analyzes large datasets to improve AI applications."
+          ],
+          skills: [
+              "Programming (Python, TensorFlow, PyTorch).",
+              "Data science and deep learning.",
+              "Mathematical modeling and problem-solving."
+          ],
+          salary: [
+              "Average salary: $120,000 per year.",
+              "Entry-level: $85,000 per year.",
+              "Senior-level: $150,000+ per year."
+          ]
+      },
+      "Computer Engineering": {
+          entailment: [
+              "Designs and develops computer hardware and software.",
+              "Works with microprocessors, circuit boards, and embedded systems.",
+              "Optimizes computing performance and energy efficiency."
+          ],
+          skills: [
+              "Circuit design and embedded systems.",
+              "Software development and hardware testing.",
+              "Programming (C, C++, Verilog, Assembly)."
+          ],
+          salary: [
+              "Average salary: $100,000 per year.",
+              "Entry-level: $75,000 per year.",
+              "Senior-level: $130,000+ per year."
+          ]
+      },
+      "Computer Science": {
+          entailment: [
+              "Develops software applications and systems.",
+              "Solves complex computational problems.",
+              "Focuses on algorithms, data structures, and programming languages."
+          ],
+          skills: [
+              "Programming (Java, Python, C++).",
+              "Data structures and algorithm design.",
+              "Software engineering principles."
+          ],
+          salary: [
+              "Average salary: $105,000 per year.",
+              "Entry-level: $80,000 per year.",
+              "Senior-level: $140,000+ per year."
+          ]
+      },
+      "Cybersecurity": {
+          entailment: [
+              "Protects networks and systems from cyber threats.",
+              "Conducts penetration testing and vulnerability assessments.",
+              "Implements security protocols and encryption techniques."
+          ],
+          skills: [
+              "Network security and risk management.",
+              "Ethical hacking and cryptography.",
+              "Incident response and forensic analysis."
+          ],
+          salary: [
+              "Average salary: $110,000 per year.",
+              "Entry-level: $85,000 per year.",
+              "Senior-level: $145,000+ per year."
+          ]
+      },
+      "Electrical Engineering": {
+          entailment: [
+              "Designs and develops electrical systems and components.",
+              "Works with power generation, electronics, and telecommunications.",
+              "Conducts circuit analysis and signal processing."
+          ],
+          skills: [
+              "Circuit design and analysis.",
+              "Electromagnetics and control systems.",
+              "Programming (MATLAB, C, VHDL)."
+          ],
+          salary: [
+              "Average salary: $95,000 per year.",
+              "Entry-level: $70,000 per year.",
+              "Senior-level: $125,000+ per year."
+          ]
+      },
+      "Graphic Design": {
+          entailment: [
+              "Creates visual concepts for branding, marketing, and digital media.",
+              "Works with typography, color theory, and digital tools.",
+              "Designs user-friendly interfaces and multimedia content."
+          ],
+          skills: [
+              "Adobe Creative Suite (Photoshop, Illustrator, InDesign).",
+              "UI/UX principles and branding.",
+              "Typography and visual storytelling."
+          ],
+          salary: [
+              "Average salary: $60,000 per year.",
+              "Entry-level: $45,000 per year.",
+              "Senior-level: $90,000+ per year."
+          ]
+      },
+      "Human-Computer Interaction": {
+          entailment: [
+              "Designs user-centered digital products and interfaces.",
+              "Conducts usability research and testing.",
+              "Develops intuitive interactions between humans and technology."
+          ],
+          skills: [
+              "UI/UX design and usability testing.",
+              "Cognitive psychology and human factors.",
+              "Prototyping (Figma, Sketch, Adobe XD)."
+          ],
+          salary: [
+              "Average salary: $100,000 per year.",
+              "Entry-level: $75,000 per year.",
+              "Senior-level: $130,000+ per year."
+          ]
+      },
+      "Information Technology": {
+          entailment: [
+              "Manages and maintains IT infrastructure.",
+              "Provides technical support and network administration.",
+              "Implements cybersecurity measures and cloud solutions."
+          ],
+          skills: [
+              "IT support and troubleshooting.",
+              "Networking (Cisco, AWS, Azure).",
+              "System administration and database management."
+          ],
+          salary: [
+              "Average salary: $85,000 per year.",
+              "Entry-level: $60,000 per year.",
+              "Senior-level: $120,000+ per year."
+          ]
+      },
+      "IT Informatics": {
+          entailment: [
+              "Analyzes and manages information systems.",
+              "Develops data-driven solutions for businesses.",
+              "Improves user experience and accessibility of information."
+          ],
+          skills: [
+              "Data analysis and database management.",
+              "Information architecture and user experience.",
+              "Programming (SQL, Python, R)."
+          ],
+          salary: [
+              "Average salary: $88,000 per year.",
+              "Entry-level: $65,000 per year.",
+              "Senior-level: $125,000+ per year."
+          ]
+      },
+      "Mechanical Engineering": {
+          entailment: [
+              "Designs, develops, and tests mechanical systems.",
+              "Works with robotics, manufacturing, and thermodynamics.",
+              "Applies engineering principles to real-world problems."
+          ],
+          skills: [
+              "CAD software (SolidWorks, AutoCAD).",
+              "Thermodynamics and fluid mechanics.",
+              "Programming (MATLAB, Python, C++)."
+          ],
+          salary: [
+              "Average salary: $95,000 per year.",
+              "Entry-level: $70,000 per year.",
+              "Senior-level: $125,000+ per year."
+          ]
+      },
+      "Software Engineering": {
+          entailment: [
+              "Develops, tests, and maintains software applications.",
+              "Works with databases, front-end and back-end systems.",
+              "Collaborates with teams to build scalable software solutions."
+          ],
+          skills: [
+              "Programming (Java, Python, JavaScript, C#).",
+              "Software development lifecycle and Agile methodologies.",
+              "Database management (SQL, MongoDB)."
+          ],
+          salary: [
+              "Average salary: $110,000 per year.",
+              "Entry-level: $85,000 per year.",
+              "Senior-level: $150,000+ per year."
+          ]
+      }
+  };
+
+  // **Check if the selected major exists in faqData**
+  if (!faqData[major]) {
+      console.error("No data found for major:", major);
+      return;
+  }
+
+  // **Update FAQ Title**
+  document.getElementById('change-title').innerText = major + " FAQ";
+
+  // **Update each accordion section**
+  document.getElementById('job-entailment').innerHTML = formatList(faqData[major].entailment);
+  document.getElementById('skills-needed').innerHTML = formatList(faqData[major].skills);
+  document.getElementById('average-salary').innerHTML = formatList(faqData[major].salary);
 }
 
-function compEngineering() {
-  document.getElementById('change-title').innerText = 'Computer Engineering FAQ';
-  document.getElementById('change-text').innerText = 'Computer Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function compSci() {
-  document.getElementById('change-title').innerText = 'Computer Science FAQ';
-  document.getElementById('change-text').innerText = 'Computer Science: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function cyberSecurity() {
-  document.getElementById('change-title').innerText = 'Cybersecurity FAQ';
-  document.getElementById('change-text').innerText = 'Cybersecurity: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function electricalEng() {
-  document.getElementById('change-title').innerText = 'Electrical Engineering FAQ';
-  document.getElementById('change-text').innerText = 'Electrical Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function graphicDesign() {
-  document.getElementById('change-title').innerText = 'Graphic Design FAQ';
-  document.getElementById('change-text').innerText = 'Graphic Design: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function hci() {
-  document.getElementById('change-title').innerText = 'Human Computer Interaction FAQ';
-  document.getElementById('change-text').innerText = 'Human Computer Interaction: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function infoTech() {
-  document.getElementById('change-title').innerText = 'Information Technology FAQ';
-  document.getElementById('change-text').innerText = 'Information Technology: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function itInformatics() {
-  document.getElementById('change-title').innerText = 'IT Informatics FAQ';
-  document.getElementById('change-text').innerText = 'IT Informatics: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function mechEng() {
-  document.getElementById('change-title').innerText = 'Mechanical Engineering FAQ';
-  document.getElementById('change-text').innerText = 'Mechanical Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-
-function softEng() {
-  document.getElementById('change-title').innerText = 'Software Engineering FAQ';
-  document.getElementById('change-text').innerText = 'Software Engineering: Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-}
-function toggleInfo(element) {
-  element.classList.toggle("active");
+// **Helper function to format lists**
+function formatList(items) {
+  return "<ul>" + items.map(item => "<li>" + item + "</li>").join("") + "</ul>";
 }
