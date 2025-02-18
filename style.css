@@ -450,7 +450,7 @@ padding: 2em;
   text-align: left;
   margin-right: 5em;
   margin-left: 5em;
-  margin-bottom: 5em;
+  margin-bottom: 5em
 }
 
 .accordion-item{
@@ -588,4 +588,7 @@ h1#change-title{
 }
 .arrow:hover{
   color: var(--current-color);
+}
+a{
+  text-decoration: none;
 }
