@@ -76,8 +76,9 @@ footer {
 
   h2{
     text-align: center;
-    padding: 1em;
+    padding: .5em;
     font-family: "Kanit";
+    font-size: 3em;
   }
 h2.examples{
   margin-top: 3em;
@@ -115,6 +116,7 @@ h1.display-1{
     }
     .image {
     position: relative;
+    box-shadow: 7px 7px 2px rgb(187, 187, 187);
     
     }
     .image__img {
@@ -550,15 +552,25 @@ h1#change-title{
   transition: opacity 0.3s ease;
   padding: 10px;
 }
-
+.grid{
+  margin-bottom: 3em;
+}
 .college-item:hover .college-info,
 .college-item.active .college-info {
   opacity: 1;
 }
-@media (max-width: 576px) {
-  .college-logo {
-    width: 80px; /* Slightly smaller logos on mobile */
-    margin: 5px;
+@media (min-width: 992px) {  
+  .row {
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+}
+
+/* Remove extra margins on medium and small screens */
+@media (max-width: 991px) {  
+  .row {
+    margin-left: 5em;
+    margin-right: 5em;
   }
 }
 
@@ -595,4 +607,63 @@ h1#change-title{
 }
 a{
   text-decoration: none;
+}
+.text-boxes {
+  text-align: center;
+  box-shadow: 7px 7px 2px rgb(207, 207, 207); /*box shadow under each text box*/
+}
+.blue {
+  background-color: #46A9D3;
+}
+h3 {
+  font-family: "Kanit";
+}
+.text-boxes {
+  height: 200px; /* Maintain fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #BB67A3;
+
+  padding: 20px;
+  overflow: hidden; /* Prevent text overflow */
+  max-width: 100%;
+}
+
+/* Ensure the heading remains fixed */
+.text-boxes h3 {
+  margin-bottom: 10px;
+}
+
+/* Typing effect for paragraph text */
+.typing-text {
+  font-size: 1.1rem;
+  display: block;
+  white-space: normal; /* Allow text wrapping */
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Prevents text from getting cut off */
+#typedText {
+  max-height: 100px; /* Set a max height */
+  overflow-y: auto; /* Add scrolling if necessary */
+  padding: 5px;
+}
+
+/* Make the text box flexible for small screens */
+@media (max-width: 768px) {
+  .text-boxes {
+      height: auto; /* Adjust height for smaller screens */
+      padding: 15px;
+  }
+
+  #typedText {
+      max-height: 120px; /* Allow for more space on smaller screens */
+  }
+}
+p{
+  font-family: "Kanit";
 }

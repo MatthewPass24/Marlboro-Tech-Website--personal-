@@ -258,3 +258,20 @@ function updateFAQ(major) {
 function formatList(items) {
   return "<ul>" + items.map(item => "<li>" + item + "</li>").join("") + "</ul>";
 }
+
+const text = "Web design plays a crucial role in user experience, branding, and accessibility, shaping the way people interact with online content.";
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("typedText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 45); // Speed of typing (45ms)
+    } else {
+        document.getElementById("typedText").style.borderRight = "none"; // Remove cursor after typing
+    }
+}
+
+window.onload = function() {
+    setTimeout(typeWriter, 500); // Delay start
+};
