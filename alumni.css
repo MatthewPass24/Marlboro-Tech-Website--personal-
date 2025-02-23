@@ -83,7 +83,6 @@ footer {
   }
 h2.examples{
   margin-top: 3em;
-  margin-bottom: 2em;
 }
 
 h1.display-1{
@@ -91,96 +90,104 @@ h1.display-1{
     font-family: Kanit;
 }
 /* Start of the overlays for each website image */
+.examples {
+  text-align: center;
+  margin-top: 1em;
+}
+.pages button {
+  /* Override Bootstrap defaults */
+  background-color: #f8f9fa;
+  border: 2px solid #ec3963;
+  color: #ec3963;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  transition: all 0.3s ease;
+  font-family: "Kanit";
+  font-weight: 300;
+  margin: 1em;
+}
+
+.pages button:hover {
+  background-color: #ec3963;
+  color: #fff;
+}
+
+.pages button.active {
+  background-color: #ec3963;
+  color: #fff;
+}
 .pages {
-    text-align: center;
-    margin-bottom: 3em;
-    }
-    .image {
-    position: relative;
-    
-    }
-    #boxes {
-      box-shadow: 7px 7px 2px rgb(187, 187, 187);
-    }
-    .image__img {
-    display: block;
-    width: 100%;
-    
-    }
-    
-    .image__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #EC3963;
-    color: #ffffff;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-    }
-    .image__overlay > * {
-    transform: translateY(50px);
-    transition: transform 0.5s;
-    }
-    .image__overlay:hover {
-      opacity: 1;
-    }
-    .image__overlay:hover > * {
-    transform: translateY(0);
-    }
-    .image__title {
-    font-size: 2em;
-    font-weight: bold;
-    }
-    .image__description {
-    font-size: 1.25em;
-    margin-top: 0.25em;
-    text-align: left;
-    }
-    .bottom {
-        margin-top: 3em;
-        height: 6em;
-      }
-      .button-23 {
-        background-color: #ffffff73;
-        border: 1px solid #ffffff;
-        font-family: 'Poppins';
-        border-radius: 8px;
-        box-sizing: border-box;
-        color: #ffffff;
-        cursor: pointer;
-        display: inline-block;
-        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 20px;
-        margin: 0;
-        outline: none;
-        padding: 13px 23px;
-        position: relative;
-        text-align: center;
-      text-decoration: none;
-        user-select: none;
-        -webkit-user-select: none;
-        width: auto;
-      }
-      
-      .button-23:focus-visible {
-      
-      }
-      
-      .button-23:active {
-        background-color: #F7F7F7;
-        text-decoration: none;
-      
-      }
+  text-align: center;
+  margin-bottom: 3em;
+}
+.badge {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+.active {
+  background-color: #EC3963 !important;
+  color: #fff;
+}
+.image {
+  position: relative;
+}
+.boxes {
+  box-shadow: 7px 7px 2px rgb(187, 187, 187);
+}
+.image__img {
+  display: block;
+  width: 100%;
+}
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #EC3963;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.image__overlay > * {
+  transform: translateY(50px);
+  transition: transform 0.5s;
+}
+.image__overlay:hover {
+  opacity: 1;
+}
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+  text-align: left;
+}
+.button-23 {
+  background-color: #ffffff73;
+  border: 1px solid #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 23px;
+  text-align: center;
+  text-decoration: none;
+}
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* start of the card carousel for the alumni */
 section.students {
@@ -317,6 +324,9 @@ section .card .image img {
 .accordion-body {
   padding: 20px; /* Reduce padding inside the content */
 }
+li{
+  font-family: "Kanit";
+}
 .left-section {
   flex: 1;
   margin-right: 1em;
@@ -369,6 +379,7 @@ section .card .image img {
 /*Start of the majors section */
 .programs {
   background-color: #EC3963;
+  padding-bottom: 1.5em;
 }
 .container-select {
   padding: 40px;

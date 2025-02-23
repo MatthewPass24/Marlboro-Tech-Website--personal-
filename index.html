@@ -377,66 +377,33 @@
             </div>
           </div>-->
 
-          <h2 class="examples">Notable Websites</h2>
-          <div class="pages">
-            <div class="row g-4">
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="image" id="boxes">
-                  <img class="image__img" src="img/Adobe Express - file (1).png">
+          <div id="vue_app">
+            <h2 class="examples">Past Websites</h2>
+            <div class="pages">
+              <!-- Render each category button -->
+              <button 
+                v-for="category in categories" 
+                :key="category" 
+                class="badge rounded-pill" 
+                :class="{ active: category === selectedCategory }"
+                @click="selectCategory(category)">
+                {{ category }}
+              </button>
+            </div>
+            <div class="row g-4" id="websites-container">
+              <!-- Render websites for the currently selected category -->
+              <div 
+                v-for="(site, index) in websitesData[selectedCategory]" 
+                :key="index" 
+                class="col-lg-6 col-sm-12 col-12">
+                <div class="image boxes">
+                  <img class="image__img" :src="site.img" :alt="site.title">
                   <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">Dominic Adragna's Portfolio</div>
+                    <div class="image__title">{{ site.title }}</div>
                     <p class="image__description">
-                    <ul></ul>
-                    <a href="https://portfolio.byteroach.com/?authuser=0" target="_blank" rel="noopener noreferrer">
-                      <button class="button-23" role="button">Learn More</button>
-                    </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="image" id="boxes">
-                  <img class="image__img" src="img/abbie.png">
-                  <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">Abbie Marder's Site</div>
-                    <p class="image__description">
-                    <ul></ul>
-                    <a href="https://abbiemarder.github.io/Senior-Portfolio/?authuser=0" target="_blank"
-                      rel="noopener noreferrer">
-                      <button class="button-23" role="button">Learn More</button>
-                    </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-sm-12 col-12">
-                <div class="image" id="boxes">
-                  <img class="image__img" src="img/Adobe Express - file (2).png">
-                  <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">Ryan Chung's Portfolio</div>
-                    <p class="image__description">
-                    <ul></ul>
-                    <a href="https://524rc.github.io/Port3/?authuser=0" target="_blank" rel="noopener noreferrer">
-                      <button class="button-23" role="button">Learn More</button>
-                    </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="image" id="boxes">
-                  <img class="image__img" src="img/Adobe Express - file (3).png">
-                  <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">Brandon Winecoor's Site</div>
-                    <p class="image__description">
-                    <ul></ul>
-                    <a href="https://bwinecoor.github.io/newportfolio/site2.html#home" target="_blank"
-                      rel="noopener noreferrer">
-                      <button class="button-23" role="button">Learn More</button>
-                    </a>
+                      <a :href="site.link" target="_blank" rel="noopener noreferrer">
+                        <button class="button-23" role="button">Learn More</button>
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -464,6 +431,8 @@
           <!-- Section: Social media -->
         </div>
       </footer>
+      <script src="https://unpkg.com/vue@3"></script>
+
     </body>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
